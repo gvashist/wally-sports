@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wally Sports — Pickleball & Badminton Arena, Bangalore</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta name="description" content="Wally Sports is Bangalore's premier pickleball and badminton arena. 6 pickleball courts, 3 badminton courts, expert coaching and events serving HSR, Harlur and Kudlu." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;color:#151D2A;background:#fff;overflow-x:hidden}
+    a{text-decoration:none;color:inherit}
+    :root{--forest:#1B4332;--green:#00AB6A;--orange:#E55729;--beige:#F5EDD6;--cream:#F5F0E8;--navy:#151D2A}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--forest);padding:0 40px;height:68px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 24px rgba(0,0,0,.25)}
+    .nav-logo img{height:85px;width:auto;display:block}
+    .nav-links{display:flex;gap:4px}
+    .nav-links a{padding:8px 16px;border-radius:100px;font-size:14px;color:rgba(245,237,214,.7);transition:all .15s;font-weight:500}
+    .nav-links a:hover{color:var(--beige);background:rgba(245,237,214,.08)}
+    .nav-cta{padding:10px 24px;background:var(--green);color:#fff;border-radius:100px;font-size:13px;font-weight:600;transition:opacity .2s}
+    .nav-cta:hover{opacity:.88}
+    .hero{min-height:100vh;background:var(--forest);position:relative;display:flex;align-items:center;padding:130px 40px 90px;overflow:hidden}
+    .hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(245,237,214,.04) 1px,transparent 1px);background-size:28px 28px}
+    .hero-orb1{position:absolute;width:700px;height:700px;border-radius:50%;background:rgba(0,171,106,.09);filter:blur(130px);top:-250px;right:-150px;pointer-events:none}
+    .hero-orb2{position:absolute;width:450px;height:450px;border-radius:50%;background:rgba(229,87,41,.07);filter:blur(110px);bottom:-120px;left:-100px;pointer-events:none}
+    .hero-inner{position:relative;max-width:1140px;margin:0 auto;width:100%}
+    .eyebrow-chip{display:inline-flex;align-items:center;gap:8px;background:rgba(245,237,214,.08);border:1px solid rgba(245,237,214,.15);border-radius:100px;padding:6px 18px;margin-bottom:30px}
+    .eyebrow-dot{width:6px;height:6px;border-radius:50%;background:var(--green);flex-shrink:0}
+    .eyebrow-chip span{font-size:12px;font-weight:600;color:rgba(245,237,214,.7);letter-spacing:.1em;text-transform:uppercase}
+    .hero h1{font-family:'Lora',serif;font-weight:700;font-size:clamp(2.8rem,5.5vw,4.4rem);line-height:1.08;color:var(--beige);margin-bottom:26px;letter-spacing:-.02em}
+    .hero h1 em{font-style:italic}
+    .cg{color:var(--green)}.co{color:var(--orange)}
+    .hero-sub{font-size:17px;color:rgba(245,237,214,.6);max-width:520px;line-height:1.75;margin-bottom:44px}
+    .hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:60px}
+    .btn-primary{padding:14px 32px;background:var(--green);color:#fff;border-radius:100px;font-size:15px;font-weight:600;transition:opacity .2s;display:inline-block}
+    .btn-primary:hover{opacity:.88}
+    .btn-outline{padding:14px 32px;background:transparent;color:var(--beige);border:1.5px solid rgba(245,237,214,.3);border-radius:100px;font-size:15px;font-weight:600;transition:all .2s;display:inline-block}
+    .btn-outline:hover{border-color:rgba(245,237,214,.7)}
+    .hero-stats{display:flex;align-items:center;flex-wrap:wrap}
+    .stat-div{width:1px;height:40px;background:rgba(245,237,214,.12);margin:0 32px}
+    .stat-val{font-family:'Lora',serif;font-size:26px;font-weight:700;color:var(--beige);line-height:1}
+    .stat-lbl{font-size:11px;color:rgba(245,237,214,.4);text-transform:uppercase;letter-spacing:.08em;margin-top:5px}
+    section{padding:88px 40px}
+    .container{max-width:1140px;margin:0 auto}
+    .eyebrow{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--forest);margin-bottom:10px}
+    .eyebrow-light{color:var(--green)}
+    h2.st{font-family:'Lora',serif;font-size:clamp(1.9rem,3.5vw,2.6rem);font-weight:700;line-height:1.15;margin-bottom:14px;color:var(--navy)}
+    h2.st em{font-style:italic;color:var(--forest)}
+    h2.st-light{color:var(--beige)!important}
+    h2.st-light em{color:var(--green)!important}
+    .sec-sub{font-size:16px;color:#666;line-height:1.65;max-width:560px}
+    .sec-sub-light{color:rgba(245,237,214,.6)}
+    .badge{display:inline-block;padding:4px 12px;border-radius:100px;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase}
+    .bg-green{background:rgba(0,171,106,.12);color:var(--green);border:1px solid rgba(0,171,106,.25)}
+    .bg-orange{background:rgba(229,87,41,.12);color:var(--orange);border:1px solid rgba(229,87,41,.25)}
+    .bg-forest{background:rgba(27,67,50,.10);color:var(--forest);border:1px solid rgba(27,67,50,.2)}
+    .bg-navy{background:rgba(21,29,42,.08);color:var(--navy);border:1px solid rgba(21,29,42,.15)}
+    .bg-slate{background:rgba(68,95,104,.10);color:#445F68;border:1px solid rgba(68,95,104,.2)}
+
+    /* Courts */
+    .courts-section{background:var(--cream)}
+    .courts-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:48px}
+    .court-card{background:#fff;border-radius:24px;overflow:hidden;border:1px solid #e8e4dc;transition:all .25s}
+    .court-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(27,67,50,.12)}
+    .court-visual{height:220px;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:24px}
+    .cv-pickle{background:linear-gradient(160deg,#1B4332 0%,#0d2318 60%,#122c1e 100%)}
+    .cv-badm{background:linear-gradient(160deg,#2a1608 0%,#1a0d04 60%,#3d1f0a 100%)}
+    .cv-pickle::before{content:'';position:absolute;inset:0;background:linear-gradient(rgba(0,171,106,.18) 1px,transparent 1px),linear-gradient(90deg,rgba(0,171,106,.18) 1px,transparent 1px);background-size:48px 48px}
+    .cv-pickle::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;height:75%;border:2px solid rgba(0,171,106,.5);border-radius:4px}
+    .cv-badm::before{content:'';position:absolute;inset:0;background:linear-gradient(rgba(229,87,41,.15) 1px,transparent 1px),linear-gradient(90deg,rgba(229,87,41,.15) 1px,transparent 1px);background-size:44px 44px}
+    .cv-badm::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:55%;height:80%;border:2px solid rgba(229,87,41,.45);border-radius:2px}
+    .court-net{position:absolute;left:50%;top:0;bottom:0;width:1px;background:rgba(255,255,255,.15);z-index:1}
+    .court-vis-label{position:relative;z-index:2;display:flex;align-items:center;gap:10px}
+    .cv-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;color:#fff;flex-shrink:0;letter-spacing:.05em}
+    .cv-icon.green{background:var(--green)}.cv-icon.orange{background:var(--orange)}
+    .cv-name{font-family:'Lora',serif;font-size:18px;font-weight:700;color:rgba(245,237,214,.9)}
+    .cv-count{font-size:12px;color:rgba(245,237,214,.5);margin-top:2px}
+    .court-body{padding:26px 28px 30px}
+    .court-hdr{display:flex;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+    .court-hdr h3{font-family:'Lora',serif;font-size:20px;font-weight:700;color:var(--navy)}
+    .court-desc{font-size:14px;color:#666;line-height:1.75;margin-bottom:22px}
+    .court-facts{display:flex;gap:28px;margin-bottom:24px}
+    .cf-val{font-family:'Lora',serif;font-size:15px;font-weight:700}.cf-lbl{font-size:11px;color:#999;text-transform:uppercase;letter-spacing:.06em;margin-top:3px}
+    .cf-val.green{color:var(--forest)}.cf-val.orange{color:var(--orange)}
+    .book-links{display:flex;gap:10px;flex-wrap:wrap}
+    .btn-book{padding:9px 20px;border-radius:100px;font-size:13px;font-weight:600;transition:all .2s;display:inline-flex;align-items:center;gap:6px}
+    .btn-bf{background:var(--forest);color:var(--beige)}.btn-bf:hover{opacity:.88}
+    .btn-bo{background:transparent;color:var(--forest);border:1.5px solid rgba(27,67,50,.25)}.btn-bo:hover{border-color:var(--forest);background:rgba(27,67,50,.05)}
+    .btn-bor{background:var(--orange);color:#fff}.btn-bor:hover{opacity:.88}
+
+    /* Events */
+    .events-section{background:#fff}
+    .events-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+    .event-card{background:#fff;border-radius:22px;overflow:hidden;border:1px solid #e8e4dc;transition:all .25s}
+    .event-card:hover{transform:translateY(-4px);box-shadow:0 14px 44px rgba(27,67,50,.1)}
+    .event-hdr{background:var(--forest);padding:20px 22px;display:flex;justify-content:space-between;align-items:flex-start}
+    .date-chip{border-radius:12px;padding:10px 14px;text-align:center;min-width:54px}
+    .dc-green{background:var(--green)}.dc-orange{background:var(--orange)}.dc-slate{background:#445F68}
+    .date-day{font-family:'Lora',serif;font-size:24px;font-weight:700;color:#fff;line-height:1}
+    .date-mon{font-size:10px;color:rgba(255,255,255,.8);letter-spacing:.1em;text-transform:uppercase;margin-top:3px}
+    .date-tbd{font-family:'Lora',serif;font-size:13px;font-weight:700;color:#fff;line-height:1.3;text-align:center;padding:4px 0}
+    .ev-badges{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+    .event-body{padding:20px 22px 24px}
+    .ev-title{font-family:'Lora',serif;font-size:17px;font-weight:700;color:var(--navy);margin-bottom:10px}
+    .ev-meta{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+    .ev-meta-icon{width:16px;height:16px;flex-shrink:0;opacity:.45}
+    .ev-meta-text{font-size:13px;color:#666}
+    .ev-footer{margin-top:16px;padding-top:16px;border-top:1px solid #f0ece4;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+    .ev-price{font-family:'Lora',serif;font-size:19px;font-weight:700;color:var(--forest)}
+    .events-note{margin-top:36px;padding:20px 24px;background:var(--cream);border-radius:16px;text-align:center;font-size:14px;color:#555;line-height:1.6;border:1px solid #e8e4dc}
+    .events-note strong{color:var(--navy)}.events-note a{color:var(--forest);font-weight:600}
+
+    /* Coaching */
+    .coaching-section{background:var(--forest)}
+    .coaching-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px}
+    .coach-card{background:rgba(245,237,214,.05);border-radius:22px;border:1px solid rgba(245,237,214,.1);padding:34px;transition:all .25s}
+    .coach-card:hover{background:rgba(245,237,214,.08)}
+    .coach-av{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;color:#fff;margin-bottom:20px;letter-spacing:.05em}
+    .coach-av.green{background:var(--green)}.coach-av.orange{background:var(--orange)}
+    .coach-name{font-family:'Lora',serif;font-size:21px;font-weight:700;color:var(--beige);margin-bottom:4px}
+    .coach-title{font-size:13px;font-weight:600;margin-bottom:18px}
+    .coach-title.green{color:var(--green)}.coach-title.orange{color:var(--orange)}
+    .coach-desc{font-size:14px;color:rgba(245,237,214,.58);line-height:1.75;margin-bottom:22px}
+    .coach-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+    .ct{padding:5px 13px;border-radius:100px;font-size:12px;font-weight:500}
+    .ct.green{background:rgba(0,171,106,.15);color:#5de0a8}
+    .ct.orange{background:rgba(229,87,41,.15);color:#f0936f}
+    .btn-wa{display:inline-flex;align-items:center;gap:10px;padding:12px 24px;border-radius:100px;font-size:14px;font-weight:600;transition:opacity .2s}
+    .btn-wa.green{background:var(--green);color:#fff}.btn-wa.orange{background:var(--orange);color:#fff}.btn-wa:hover{opacity:.88}
+    .wa-svg{width:18px;height:18px;flex-shrink:0}
+
+    /* Contact */
+    .contact-section{background:var(--cream)}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-top:48px;align-items:start}
+    .ci-item{display:flex;gap:18px;margin-bottom:30px}
+    .ci-icon{width:46px;height:46px;border-radius:12px;background:rgba(27,67,50,.09);border:1px solid rgba(27,67,50,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .ci-icon svg{width:20px;height:20px;color:var(--forest)}
+    .ci-lbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#999;margin-bottom:5px}
+    .ci-val{font-size:15px;font-weight:500;color:var(--navy);line-height:1.6}
+    .ci-val a{color:var(--forest);transition:opacity .15s}
+    .ci-val a:hover{opacity:.75}
+    .cf{background:#fff;border-radius:22px;padding:38px;border:1px solid #e8e4dc}
+    .cf h3{font-family:'Lora',serif;font-size:21px;font-weight:700;color:var(--navy);margin-bottom:6px}
+    .cf>p{font-size:14px;color:#888;margin-bottom:26px}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .fg{margin-bottom:14px}
+    .fg label{display:block;font-size:12px;font-weight:600;color:#555;margin-bottom:6px;text-transform:uppercase;letter-spacing:.06em}
+    .fg input,.fg textarea,.fg select{width:100%;padding:12px 14px;border:1.5px solid #ddd8cf;border-radius:12px;font-family:'DM Sans',sans-serif;font-size:14px;color:var(--navy);outline:none;transition:border-color .2s;background:#fff;appearance:none}
+    .fg input:focus,.fg textarea:focus,.fg select:focus{border-color:var(--forest)}
+    .fg textarea{resize:vertical;min-height:88px}
+    .form-note{font-size:11px;color:#aaa;text-align:center;margin-top:10px}
+    .form-submit{width:100%;padding:14px;background:var(--forest);color:var(--beige);border:none;border-radius:100px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;cursor:pointer;transition:opacity .2s;margin-top:6px}
+    .form-submit:hover{opacity:.88}.form-submit:disabled{opacity:.55;cursor:not-allowed}
+    .form-success{text-align:center;padding:36px 0;display:none}
+    .fs-icon{width:60px;height:60px;background:#f0fdf4;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
+    .form-success h4{font-family:'Lora',serif;font-size:20px;color:var(--navy);margin-bottom:8px}
+    .form-success p{font-size:14px;color:#666;line-height:1.6}
+    .form-err{background:#fee2e2;color:#dc2626;padding:12px 16px;border-radius:10px;font-size:13px;margin-bottom:14px;display:none}
+
+    /* Footer */
+    footer{background:var(--forest);padding:60px 40px 32px}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:52px;margin-bottom:52px}
+    .footer-logo img{height:34px;width:auto}
+    .fb p{font-size:13px;color:rgba(245,237,214,.4);line-height:1.7;margin-top:10px}
+    .fb .tl{font-family:'Lora',serif;font-style:italic;font-size:14px;color:rgba(245,237,214,.6);margin-bottom:6px}
+    .fc h4{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--beige);margin-bottom:16px}
+    .fc a{display:block;font-size:13px;color:rgba(245,237,214,.4);margin-bottom:11px;transition:color .15s}
+    .fc a:hover{color:var(--green)}
+    .footer-div{height:1px;background:rgba(245,237,214,.09);margin-bottom:26px}
+    .footer-bot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+    .footer-copy{font-size:12px;color:rgba(245,237,214,.28)}
+    .footer-pol{display:flex;gap:22px;flex-wrap:wrap}
+    .footer-pol a{font-size:12px;color:rgba(245,237,214,.28);transition:color .15s}
+    .footer-pol a:hover{color:var(--green)}
+
+    @media(max-width:900px){.courts-grid,.coaching-grid,.contact-grid{grid-template-columns:1fr}.events-grid{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr;gap:36px}}
+    @media(max-width:640px){nav{padding:0 20px}.nav-links{display:none}section{padding:64px 20px}.hero{padding:110px 20px 70px}.events-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr;gap:28px}.form-row{grid-template-columns:1fr}.stat-div{display:none}.hero-stats{gap:24px}}
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo"><img src="logo.svg" alt="Wally Sports" /></a>
+  <div class="nav-links">
+    <a href="#courts">Courts</a>
+    <a href="#events">Events</a>
+    <a href="#coaching">Coaching</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a href="https://playo.co/booking?venueId=3ea2d531-9a48-4d16-980c-288271e3783d" target="_blank" class="nav-cta">Book a Court</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-orb1"></div>
+  <div class="hero-orb2"></div>
+  <div class="hero-inner">
+    <div class="eyebrow-chip">
+      <div class="eyebrow-dot"></div>
+      <span>Harlur Main Road &middot; Kudlu &middot; Bangalore</span>
+    </div>
+    <h1>Play Like <em class="cg">a Kid.</em><br />Win Like <em class="co">a Champ.</em></h1>
+    <p class="hero-sub">Bangalore's premier pickleball and badminton arena. Premium courts, expert coaching, and a community that lives for competition and connection.</p>
+    <div class="hero-btns">
+      <a href="https://playo.co/booking?venueId=3ea2d531-9a48-4d16-980c-288271e3783d" target="_blank" class="btn-primary">Book a Court &rarr;</a>
+      <a href="#events" class="btn-outline">See Events</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="stat-val">6</div><div class="stat-lbl">Pickleball Courts</div></div>
+      <div class="stat-div"></div>
+      <div><div class="stat-val">3</div><div class="stat-lbl">Badminton Courts</div></div>
+      <div class="stat-div"></div>
+      <div><div class="stat-val">300+</div><div class="stat-lbl">Players</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="courts-section" id="courts">
+  <div class="container">
+    <div class="eyebrow">The Arena</div>
+    <h2 class="st">Two Sports. <em>One Home.</em></h2>
+    <p class="sec-sub">Built for people who take their game seriously, and their fun even more so.</p>
+    <div class="courts-grid">
+      <div class="court-card">
+        <div class="court-visual cv-pickle">
+          <div class="court-net"></div>
+          <div class="court-vis-label">
+            <div class="cv-icon green">PB</div>
+            <div><div class="cv-name">Pickleball</div><div class="cv-count">6 premium courts</div></div>
+          </div>
+        </div>
+        <div class="court-body">
+          <div class="court-hdr">
+            <h3>Pickleball</h3>
+            <span class="badge bg-forest">6 Courts</span>
+            <span class="badge bg-green">All Levels</span>
+          </div>
+          <p class="court-desc">Six premium pickleball courts with pro-grade surfaces, proper court lighting, and accurate line markings. Whether you're learning your first dink or training for a DUPR-rated tournament — the courts are built to match your ambition.</p>
+          <div class="court-facts">
+            <div><div class="cf-val green">Pro Grade</div><div class="cf-lbl">Surface</div></div>
+            <div><div class="cf-val green">DUPR</div><div class="cf-lbl">Rated Events</div></div>
+            <div><div class="cf-val green">Open</div><div class="cf-lbl">All Levels</div></div>
+          </div>
+          <div class="book-links">
+            <a href="https://playo.co/booking?venueId=3ea2d531-9a48-4d16-980c-288271e3783d" target="_blank" class="btn-book btn-bf">Book on Playo</a>
+            <a href="http://hudle.in/venues/wally-sports/817426" target="_blank" class="btn-book btn-bo">Book on Hudle</a>
+          </div>
+        </div>
+      </div>
+      <div class="court-card">
+        <div class="court-visual cv-badm">
+          <div class="court-net"></div>
+          <div class="court-vis-label">
+            <div class="cv-icon orange">BD</div>
+            <div><div class="cv-name">Badminton</div><div class="cv-count">3 full-size courts</div></div>
+          </div>
+        </div>
+        <div class="court-body">
+          <div class="court-hdr">
+            <h3>Badminton</h3>
+            <span class="badge bg-orange">3 Courts</span>
+            <span class="badge bg-slate">Kids &amp; Adults</span>
+          </div>
+          <p class="court-desc">Three full-size badminton courts with shuttle-ready lighting and smooth flooring. Managed by Birdie Badminton Academy, with structured coaching for kids and adults across all levels — from first-timers to competitive players.</p>
+          <div class="court-facts">
+            <div><div class="cf-val orange">Full Size</div><div class="cf-lbl">Courts</div></div>
+            <div><div class="cf-val orange">6&ndash;60 yrs</div><div class="cf-lbl">All Ages</div></div>
+            <div><div class="cf-val orange">Summer</div><div class="cf-lbl">Camps Available</div></div>
+          </div>
+          <div class="book-links">
+            <a href="https://playo.co/booking?venueId=3ea2d531-9a48-4d16-980c-288271e3783d" target="_blank" class="btn-book btn-bor">Book on Playo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="events-section" id="events">
+  <div class="container">
+    <div class="eyebrow">What's On</div>
+    <h2 class="st">Upcoming <em>Events</em></h2>
+    <p class="sec-sub">Tournaments, open play, mixers &mdash; there's always something worth showing up for.</p>
+    <div class="events-grid">
+
+      <div class="event-card">
+        <div class="event-hdr">
+          <div class="date-chip dc-orange"><div class="date-day">09</div><div class="date-mon">APR</div></div>
+          <div class="ev-badges"><span class="badge bg-orange">Tournament</span><span class="badge bg-forest">Pickleball</span></div>
+        </div>
+        <div class="event-body">
+          <div class="ev-title">DUPR Singles Tournament</div>
+          <div class="ev-meta">
+            <svg class="ev-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span class="ev-meta-text">7:00 PM &ndash; 10:00 PM</span>
+          </div>
+          <div class="ev-meta">
+            <svg class="ev-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <span class="ev-meta-text">Beginner &amp; Intermediate</span>
+          </div>
+          <div class="ev-footer">
+            <div><div style="font-size:11px;color:#aaa;text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px">Entry</div><div class="ev-price">400</div></div>
+            <span class="badge bg-orange">DUPR Rated</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <div class="event-hdr">
+          <div class="date-chip dc-green"><div class="date-day">12</div><div class="date-mon">APR</div></div>
+          <div class="ev-badges"><span class="badge bg-green">Open Play</span><span class="badge bg-forest">Pickleball</span></div>
+        </div>
+        <div class="event-body">
+          <div class="ev-title">Sunday Ritual</div>
+          <div class="ev-meta">
+            <svg class="ev-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span class="ev-meta-text">9:00 AM &ndash; 11:00 AM</span>
+          </div>
+          <div class="ev-meta">
+            <svg class="ev-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <span class="ev-meta-text">All Levels</span>
+          </div>
+          <div class="ev-footer">
+            <div><div style="font-size:11px;color:#aaa;text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px">Entry</div><div class="ev-price">249</div></div>
+            <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="badge bg-green">Coaching</span><span class="badge bg-slate">Open Play</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <div class="event-hdr">
+          <div class="date-chip dc-slate"><div class="date-tbd">Stay<br />Tuned</div></div>
+          <div class="ev-badges"><span class="badge bg-slate">Mixer</span><span class="badge bg-forest">Pickleball</span></div>
+        </div>
+        <div class="event-body">
+          <div class="ev-title">Dink &amp; Date</div>
+          <div class="ev-meta">
+            <svg class="ev-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span class="ev-meta-text">Date &amp; time to be announced</span>
+          </div>
+          <div class="ev-meta">
+            <svg class="ev-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <span class="ev-meta-text">All Levels</span>
+          </div>
+          <div class="ev-footer">
+            <div><div style="font-size:11px;color:#aaa;text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px">Entry</div><div class="ev-price">1000</div></div>
+            <span class="badge bg-slate">Coming Soon</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="events-note">
+      Online registration coming soon at <strong>wallysports.in</strong> &mdash; For updates and early access, WhatsApp us at <a href="https://wa.me/917337881958">+91 73378 81958</a>
+    </div>
+  </div>
+</section>
+
+<section class="coaching-section" id="coaching">
+  <div class="container">
+    <div class="eyebrow eyebrow-light">Expert Coaching</div>
+    <h2 class="st st-light">Level Up Your <em>Game</em></h2>
+    <p class="sec-sub sec-sub-light">Pickleball coaching with Anish. Badminton coaching with Birdie Academy. Both here at Wally.</p>
+    <div class="coaching-grid">
+
+      <div class="coach-card">
+        <div class="coach-av green">AK</div>
+        <div class="coach-name">Anish</div>
+        <div class="coach-title green">Head Pickleball Coach</div>
+        <p class="coach-desc">A professional player and coach with a background spanning both football and racket sports, Anish brings rare athleticism and tactical depth to his coaching. He takes players from zero to court-ready &mdash; and from court-ready to competitive. Known for breaking down complex techniques into simple, repeatable drills that stick.</p>
+        <div class="coach-tags">
+          <span class="ct green">Beginner Bootcamp</span>
+          <span class="ct green">1-on-1 Sessions</span>
+          <span class="ct green">Doubles Mastery</span>
+          <span class="ct green">Tournament Prep</span>
+        </div>
+        <a href="https://wa.me/919876540001" target="_blank" class="btn-wa green">
+          <svg class="wa-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Anish
+        </a>
+      </div>
+
+      <div class="coach-card">
+        <div class="coach-av orange">BA</div>
+        <div class="coach-name">Birdie Badminton Academy</div>
+        <div class="coach-title orange">Badminton Coaching Partner</div>
+        <p class="coach-desc">Structured coaching for all ages and levels at Wally Sports. From kids picking up a racket for the first time to competitive adults sharpening their game &mdash; Birdie's coaches bring real experience and a genuine love for the sport. Adults, kids, group sessions, and summer camps.</p>
+        <div class="coach-tags">
+          <span class="ct orange">Kids Coaching (6&ndash;14 yrs)</span>
+          <span class="ct orange">Adult Beginner &amp; Intermediate</span>
+          <span class="ct orange">Competitive Training</span>
+          <span class="ct orange">Summer Coaching Camps</span>
+        </div>
+        <a href="https://wa.me/916363351089" target="_blank" class="btn-wa orange">
+          <svg class="wa-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Birdie Academy
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="eyebrow">Get in Touch</div>
+    <h2 class="st">Find Us &amp; <em>Reach Out</em></h2>
+    <div class="contact-grid">
+      <div>
+        <div class="ci-item">
+          <div class="ci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="ci-lbl">Address</div><div class="ci-val">No 82, BBMP Khata, 144-147<br />Sarjapura Road, Kudlu<br />Bengaluru, Karnataka 560068</div></div>
+        </div>
+        <div class="ci-item">
+          <div class="ci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div><div class="ci-lbl">Hours</div><div class="ci-val">Monday &ndash; Sunday: 6:00 AM &ndash; 12:00 AM (Midnight)</div></div>
+        </div>
+        <div class="ci-item">
+          <div class="ci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 12.5a19.79 19.79 0 01-3.07-8.67A2 2 0 011.9 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div><div class="ci-lbl">Phone &amp; WhatsApp</div><div class="ci-val"><a href="tel:+917337881958">+91 73378 81958</a></div></div>
+        </div>
+        <div class="ci-item">
+          <div class="ci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div><div class="ci-lbl">Email</div><div class="ci-val"><a href="mailto:contact@wallysports.in">contact@wallysports.in</a></div></div>
+        </div>
+        <div class="ci-item">
+          <div class="ci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
+          <div><div class="ci-lbl">Corporate Enquiries</div><div class="ci-val">Team events, bulk memberships, custom tournaments &mdash; use the form or email us directly.</div></div>
+        </div>
+      </div>
+
+      <div class="cf">
+        <h3>Send us a message</h3>
+        <p>We'll get back to you within 24 hours.</p>
+        <div class="form-err" id="form-err">Something went wrong. Please WhatsApp us at +91 73378 81958.</div>
+        <div id="form-wrap">
+          <form id="contact-form" action="https://formspree.io/f/xvzvvvke" method="POST">
+            <div class="form-row">
+              <div class="fg"><label>Name *</label><input type="text" name="name" placeholder="Rahul Kumar" required /></div>
+              <div class="fg"><label>Phone *</label><input type="tel" name="phone" placeholder="+91 98765 43210" required /></div>
+            </div>
+            <div class="fg"><label>Email *</label><input type="email" name="email" placeholder="you@example.com" required /></div>
+            <div class="fg">
+              <label>I'm interested in</label>
+              <select name="interest">
+                <option value="">Select&hellip;</option>
+                <option>Playing Pickleball</option>
+                <option>Playing Badminton</option>
+                <option>Pickleball Coaching</option>
+                <option>Badminton Coaching</option>
+                <option>Corporate Event</option>
+                <option>Tournament</option>
+                <option>Something else</option>
+              </select>
+            </div>
+            <div class="fg"><label>Message</label><textarea name="message" placeholder="Tell us more&hellip;"></textarea></div>
+            <button type="submit" class="form-submit" id="form-btn">Send Message &rarr;</button>
+            <p class="form-note">We respond within 24 hours</p>
+          </form>
+        </div>
+        <div class="form-success" id="form-success">
+          <div class="fs-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <h4>Message received!</h4>
+          <p>We'll be in touch within 24 hours.<br />Or WhatsApp us at <a href="https://wa.me/917337881958" style="color:var(--forest);font-weight:600">+91 73378 81958</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="fb">
+        <div class="footer-logo"><img src="logo.svg" alt="Wally Sports" /></div>
+        <p class="tl">Play like a kid. Win like a champ.</p>
+        <p>No 82, BBMP Khata, 144-147<br />Harlur Main Road, next to DMart, Bengaluru 560068</p>
+      </div>
+      <div class="fc">
+        <h4>Play</h4>
+        <a href="https://playo.co/booking?venueId=3ea2d531-9a48-4d16-980c-288271e3783d" target="_blank">Book on Playo</a>
+        <a href="http://hudle.in/venues/wally-sports/817426" target="_blank">Book on Hudle</a>
+        <a href="#events">Events</a>
+        <a href="#coaching">Coaching</a>
+      </div>
+      <div class="fc">
+        <h4>Corporate</h4>
+        <a href="#contact">Team Events</a>
+        <a href="#contact">Memberships</a>
+        <a href="#contact">Get a Quote</a>
+      </div>
+      <div class="fc">
+        <h4>Contact</h4>
+        <a href="tel:+917337881958">+91 73378 81958</a>
+        <a href="mailto:contact@wallysports.in">contact@wallysports.in</a>
+        <a href="https://wa.me/917337881958" target="_blank">WhatsApp Us</a>
+      </div>
+    </div>
+    <div class="footer-div"></div>
+    <div class="footer-bot">
+      <div class="footer-copy">&copy; 2025 Wally Sports. Pickleball &amp; Badminton Arena, Bangalore.</div>
+      <div class="footer-pol">
+        <a href="https://merchant.razorpay.com/policy/RNKeoK7qeiZp5J/refund"    target="_blank">Cancellation &amp; Refunds</a>
+        <a href="https://merchant.razorpay.com/policy/RNKeoK7qeiZp5J/terms"     target="_blank">Terms &amp; Conditions</a>
+        <a href="https://merchant.razorpay.com/policy/RNKeoK7qeiZp5J/privacy"   target="_blank">Privacy Policy</a>
+        <a href="https://merchant.razorpay.com/policy/RNKeoK7qeiZp5J/shipping"  target="_blank">Shipping Policy</a>
+        <a href="https://merchant.razorpay.com/policy/RNKeoK7qeiZp5J/contact_us" target="_blank">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const t = document.querySelector(a.getAttribute('href'))
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior:'smooth', block:'start' }) }
+    })
+  })
+  const form = document.getElementById('contact-form')
+  const btn  = document.getElementById('form-btn')
+  form.addEventListener('submit', async e => {
+    e.preventDefault()
+    btn.disabled = true; btn.textContent = 'Sending\u2026'
+    document.getElementById('form-err').style.display = 'none'
+    try {
+      const res = await fetch(form.action, { method:'POST', body: new FormData(form), headers:{ Accept:'application/json' } })
+      if (res.ok) {
+        document.getElementById('form-wrap').style.display = 'none'
+        document.getElementById('form-success').style.display = 'block'
+      } else { throw new Error() }
+    } catch {
+      document.getElementById('form-err').style.display = 'block'
+      btn.disabled = false; btn.textContent = 'Send Message \u2192'
+    }
+  })
+</script>
+</body>
+</html>
