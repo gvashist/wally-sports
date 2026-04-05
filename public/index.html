@@ -73,8 +73,8 @@
     .cv-badm::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:55%;height:80%;border:2px solid rgba(229,87,41,.45);border-radius:2px}
     .court-net{position:absolute;left:50%;top:0;bottom:0;width:1px;background:rgba(255,255,255,.15);z-index:1}
     .court-vis-label{position:relative;z-index:2;display:flex;align-items:center;gap:10px}
-    .cv-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;color:#fff;flex-shrink:0;letter-spacing:.05em}
-    .cv-icon.green{background:var(--green)}.cv-icon.orange{background:var(--orange)}
+    .cv-icon{width:56px;height:56px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden;background:rgba(0,0,0,0.15)}
+    .cv-icon img{width:100%;height:100%;object-fit:contain}
     .cv-name{font-family:'Lora',serif;font-size:18px;font-weight:700;color:rgba(245,237,214,.9)}
     .cv-count{font-size:12px;color:rgba(245,237,214,.5);margin-top:2px}
     .court-body{padding:26px 28px 30px}
@@ -86,9 +86,9 @@
     .cf-val.green{color:var(--forest)}.cf-val.orange{color:var(--orange)}
     .book-links{display:flex;gap:10px;flex-wrap:wrap}
     .btn-book{padding:9px 20px;border-radius:100px;font-size:13px;font-weight:600;transition:all .2s;display:inline-flex;align-items:center;gap:6px}
-    .btn-bf{background:var(--forest);color:var(--beige)}.btn-bf:hover{opacity:.88}
-    .btn-bo{background:transparent;color:var(--forest);border:1.5px solid rgba(27,67,50,.25)}.btn-bo:hover{border-color:var(--forest);background:rgba(27,67,50,.05)}
-    .btn-bor{background:var(--orange);color:#fff}.btn-bor:hover{opacity:.88}
+    .btn-bf{background:#22C55E;color:#fff}.btn-bf:hover{opacity:.88}
+    .btn-bo{background:#132140;color:#fff}.btn-bo:hover{opacity:.88}
+    .btn-bor{background:#22C55E;color:#fff}.btn-bor:hover{opacity:.88}
 
     /* Events */
     .events-section{background:#fff}
@@ -117,8 +117,9 @@
     .coaching-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px}
     .coach-card{background:rgba(245,237,214,.05);border-radius:22px;border:1px solid rgba(245,237,214,.1);padding:34px;transition:all .25s}
     .coach-card:hover{background:rgba(245,237,214,.08)}
-    .coach-av{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;color:#fff;margin-bottom:20px;letter-spacing:.05em}
+    .coach-av{width:72px;height:72px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;color:#fff;margin-bottom:20px;letter-spacing:.05em;overflow:hidden;flex-shrink:0}
     .coach-av.green{background:var(--green)}.coach-av.orange{background:var(--orange)}
+    .coach-av img{width:100%;height:100%;object-fit:cover;border-radius:50%}
     .coach-name{font-family:'Lora',serif;font-size:21px;font-weight:700;color:var(--beige);margin-bottom:4px}
     .coach-title{font-size:13px;font-weight:600;margin-bottom:18px}
     .coach-title.green{color:var(--green)}.coach-title.orange{color:var(--orange)}
@@ -189,7 +190,7 @@
     <a href="#coaching">Coaching</a>
     <a href="#contact">Contact</a>
   </div>
-  <a href="https://playo.co/booking?venueId=3ea2d531-9a48-4d16-980c-288271e3783d" target="_blank" class="nav-cta">Book a Court</a>
+  <a href="#courts" class="nav-cta">Book a Court</a>
 </nav>
 
 <section class="hero">
@@ -203,7 +204,7 @@
     <h1>Play Like <em class="cg">a Kid.</em><br />Win Like <em class="co">a Champ.</em></h1>
     <p class="hero-sub">Bangalore's premier pickleball and badminton arena. Premium courts, expert coaching, and a community that lives for competition and connection.</p>
     <div class="hero-btns">
-      <a href="https://playo.co/booking?venueId=3ea2d531-9a48-4d16-980c-288271e3783d" target="_blank" class="btn-primary">Book a Court &rarr;</a>
+      <a href="#courts" class="btn-primary">Book a Court &rarr;</a>
       <a href="#events" class="btn-outline">See Events</a>
     </div>
     <div class="hero-stats">
@@ -226,7 +227,7 @@
         <div class="court-visual cv-pickle">
           <div class="court-net"></div>
           <div class="court-vis-label">
-            <div class="cv-icon green">PB</div>
+            <div class="cv-icon"><img src="dill.png" alt="Dill" /></div>
             <div><div class="cv-name">Pickleball</div><div class="cv-count">6 premium courts</div></div>
           </div>
         </div>
@@ -234,7 +235,8 @@
           <div class="court-hdr">
             <h3>Pickleball</h3>
             <span class="badge bg-forest">6 Courts</span>
-            <span class="badge bg-green">All Levels</span>
+            <span class="badge bg-green">Indoor</span>
+            <span class="badge bg-green">Outdoor</span>
           </div>
           <p class="court-desc">Six premium pickleball courts with pro-grade surfaces, proper court lighting, and accurate line markings. Whether you're learning your first dink or training for a DUPR-rated tournament — the courts are built to match your ambition.</p>
           <div class="court-facts">
@@ -252,7 +254,7 @@
         <div class="court-visual cv-badm">
           <div class="court-net"></div>
           <div class="court-vis-label">
-            <div class="cv-icon orange">BD</div>
+            <div class="cv-icon"><img src="quill.png" alt="Quill" /></div>
             <div><div class="cv-name">Badminton</div><div class="cv-count">3 full-size courts</div></div>
           </div>
         </div>
@@ -262,7 +264,7 @@
             <span class="badge bg-orange">3 Courts</span>
             <span class="badge bg-slate">Kids &amp; Adults</span>
           </div>
-          <p class="court-desc">Three full-size badminton courts with shuttle-ready lighting and smooth flooring. Managed by Birdie Badminton Academy, with structured coaching for kids and adults across all levels — from first-timers to competitive players.</p>
+          <p class="court-desc">Three full-size badminton courts with shuttle-ready lighting and wooden flooring. Structured coaching for kids and adults across all levels: from first-timers to competitive players.</p>
           <div class="court-facts">
             <div><div class="cf-val orange">Full Size</div><div class="cf-lbl">Courts</div></div>
             <div><div class="cf-val orange">6&ndash;60 yrs</div><div class="cf-lbl">All Ages</div></div>
@@ -365,10 +367,10 @@
     <div class="coaching-grid">
 
       <div class="coach-card">
-        <div class="coach-av green">AK</div>
+        <div class="coach-av"><img src="anish.png" alt="Anish Kumar" /></div>
         <div class="coach-name">Anish</div>
         <div class="coach-title green">Head Pickleball Coach</div>
-        <p class="coach-desc">A professional player and coach with a background spanning both football and racket sports, Anish brings rare athleticism and tactical depth to his coaching. He takes players from zero to court-ready &mdash; and from court-ready to competitive. Known for breaking down complex techniques into simple, repeatable drills that stick.</p>
+        <p class="coach-desc">A professional player and coach with a background spanning both football and racket sports, Anish brings rare athleticism and tactical depth to his coaching. He takes players from zero to court-ready, and from court-ready to competitive. Known for breaking down complex techniques into simple, repeatable drills that stick.</p>
         <div class="coach-tags">
           <span class="ct green">Beginner Bootcamp</span>
           <span class="ct green">1-on-1 Sessions</span>
@@ -382,7 +384,7 @@
       </div>
 
       <div class="coach-card">
-        <div class="coach-av orange">BA</div>
+        <div class="coach-av" style="background:#fff"><img src="birdie.png" alt="Birdie Badminton Academy" /></div>
         <div class="coach-name">Birdie Badminton Academy</div>
         <div class="coach-title orange">Badminton Coaching Partner</div>
         <p class="coach-desc">Structured coaching for all ages and levels at Wally Sports. From kids picking up a racket for the first time to competitive adults sharpening their game &mdash; Birdie's coaches bring real experience and a genuine love for the sport. Adults, kids, group sessions, and summer camps.</p>
@@ -422,7 +424,7 @@
         </div>
         <div class="ci-item">
           <div class="ci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-          <div><div class="ci-lbl">Email</div><div class="ci-val"><a href="mailto:contact@wallysports.in">contact@wallysports.in</a></div></div>
+          <div><div class="ci-lbl">Email</div><div class="ci-val"><a href="/cdn-cgi/l/email-protection#bfdcd0d1cbdedccbffc8ded3d3c6cccfd0cdcbcc91d6d1"><span class="__cf_email__" data-cfemail="14777b7a6075776054637578786d67647b6660673a7d7a">[email&#160;protected]</span></a></div></div>
         </div>
         <div class="ci-item">
           <div class="ci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
@@ -493,7 +495,7 @@
       <div class="fc">
         <h4>Contact</h4>
         <a href="tel:+917337881958">+91 73378 81958</a>
-        <a href="mailto:contact@wallysports.in">contact@wallysports.in</a>
+        <a href="/cdn-cgi/l/email-protection#a6c5c9c8d2c7c5d2e6d1c7cacadfd5d6c9d4d2d588cfc8"><span class="__cf_email__" data-cfemail="b7d4d8d9c3d6d4c3f7c0d6dbdbcec4c7d8c5c3c499ded9">[email&#160;protected]</span></a>
         <a href="https://wa.me/917337881958" target="_blank">WhatsApp Us</a>
       </div>
     </div>
@@ -511,7 +513,7 @@
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
       const t = document.querySelector(a.getAttribute('href'))
@@ -525,16 +527,4 @@
     btn.disabled = true; btn.textContent = 'Sending\u2026'
     document.getElementById('form-err').style.display = 'none'
     try {
-      const res = await fetch(form.action, { method:'POST', body: new FormData(form), headers:{ Accept:'application/json' } })
-      if (res.ok) {
-        document.getElementById('form-wrap').style.display = 'none'
-        document.getElementById('form-success').style.display = 'block'
-      } else { throw new Error() }
-    } catch {
-      document.getElementById('form-err').style.display = 'block'
-      btn.disabled = false; btn.textContent = 'Send Message \u2192'
-    }
-  })
-</script>
-</body>
-</html>
+      const res = await fetch(form.action, { method:'POST', body: new FormData(form), headers:{ Accept:'application/j
